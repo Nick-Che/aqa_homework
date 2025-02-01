@@ -2,19 +2,18 @@ package org.example;
 
 import java.util.*;
 
+import static org.example.Cat.getCounter;
+
 public class Main {
     public static void main(String[] args) {
-        Employee ivan = new Employee("Иванов Иван Иванович", "Тестировщик", "ivanov.i.i@gmail.com", "+375291234567", 120000, 25);
+        Animal bobik = new Cat("Боббик");
+        Animal chichik = new Cat("чичик");
+        Animal kittik = new Cat("киттик");
 
-        System.out.println(ivan.toString());
+        Dog shurik = new Dog("shurik");
 
-        List<Employee> employees = new ArrayList();
-
-        employees.add(ivan);
-        employees.add(new Employee("Александров Александр Александрович", "Менеджер", "alex.a.a@gmail.com", "+375291234567", 240000, 27));
-        employees.add(new Employee("Петров Петр Петрович", "Аналитик", "petroff.p.p@gmail.com", "+375291234567", 450000, 45));
-        employees.add(new Employee("Сергеев Сергей Сергеевич", "Разработчик", "sergey.s.s@gmail.com", "+375291234567", 320000, 32));
-        employees.add(new Employee("Дмитриев ДДмитрий Дмитриевич", "Дизайнер", "ddimas.d.d@gmail.com", "+375291234567", 300000, 28));
-
+        System.out.println(Cat.getCounter());
+        System.out.println(Dog.getCounter());
+        System.out.println(Animal.getCounter());
     }
 }
