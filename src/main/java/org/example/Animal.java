@@ -3,6 +3,7 @@ package org.example;
 public class Animal {
     private static int counter = 0;
     private String name;
+
     public Animal(String name) {
         this.name = name;
         counter++;

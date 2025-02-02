@@ -1,9 +1,10 @@
 package org.example;
 
-public class Cat extends Animal{
+public class Cat extends Animal {
     private static int counter = 0;
     private boolean hunger = false;
-    public Cat (String name) {
+
+    public Cat(String name) {
         super(name);
         counter++;
     }
@@ -12,8 +13,17 @@ public class Cat extends Animal{
         return counter;
     }
 
-    public void eat(int food){
+    public boolean isHunger() {
+        return hunger;
+    }
 
+    public void eat(int hungerIndex, Bowl bowl) {
+        if (hungerIndex <= bowl.getCapacity()) {
+            hunger = true;
+            bowl.setCapacity(bowl.getCapacity() - hungerIndex);
+        } else {
+            System.out.println(super.getName() + " не стал трогать миску, неси мандарины");
+        }
     }
 
     @Override
