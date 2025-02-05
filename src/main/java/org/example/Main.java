@@ -2,19 +2,51 @@ package org.example;
 
 import java.util.*;
 
+import static org.example.Cat.getCounter;
+
 public class Main {
     public static void main(String[] args) {
-        Employee ivan = new Employee("Иванов Иван Иванович", "Тестировщик", "ivanov.i.i@gmail.com", "+375291234567", 120000, 25);
+        Animal bobbik = new Dog("Боббик");
+        Dog sharik = new Dog("Шарик");
+        Dog hanchik = new Dog("Ханчик");
 
-        System.out.println(ivan.toString());
+        Bowl bowl = new Bowl(20);
 
-        List<Employee> employees = new ArrayList();
+        bowl.fill(30);
 
-        employees.add(ivan);
-        employees.add(new Employee("Александров Александр Александрович", "Менеджер", "alex.a.a@gmail.com", "+375291234567", 240000, 27));
-        employees.add(new Employee("Петров Петр Петрович", "Аналитик", "petroff.p.p@gmail.com", "+375291234567", 450000, 45));
-        employees.add(new Employee("Сергеев Сергей Сергеевич", "Разработчик", "sergey.s.s@gmail.com", "+375291234567", 320000, 32));
-        employees.add(new Employee("Дмитриев ДДмитрий Дмитриевич", "Дизайнер", "ddimas.d.d@gmail.com", "+375291234567", 300000, 28));
+        Cat[] cats = new Cat[4];
+        cats[0] = new Cat("Барсик");
+        cats[1] = new Cat("Персик");
+        cats[2] = new Cat("Олег");
+        cats[3] = new Cat("Китти");
 
+        for (int i = 0; i < 4; i++) {
+            cats[i].eat(15, bowl);
+        }
+
+        System.out.println(Animal.getCounter());
+        System.out.println(Dog.getCounter());
+        System.out.println(Cat.getCounter());
+
+        sharik.run(700);
+        hanchik.swim(7);
+        cats[2].run(150);
+        cats[0].swim(31);
+
+        Shape circle = new Circle(5, "Красный", "Черный");
+        Shape rectangle = new Rectangle(4, 6, "Зеленый", "Желтый");
+        Shape triangle = new Triangle(3, 4, 5, "Синий", "Розовый");
+
+        printShapeDetails(circle);
+        printShapeDetails(rectangle);
+        printShapeDetails(triangle);
+    }
+
+    public static void printShapeDetails(Shape shape) {
+        System.out.println("Периметр: " + shape.calculatePerimeter());
+        System.out.println("Площадь: " + shape.calculateArea());
+        System.out.println("Цвет фона: " + shape.getFillColor());
+        System.out.println("Цвет границ: " + shape.getBorderColor());
+        System.out.println();
     }
 }
