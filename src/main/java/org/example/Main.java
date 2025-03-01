@@ -1,42 +1,54 @@
 package org.example;
 
+import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
-        String[][] matrix = {{"1", "2", "1", "7"},
-                {"9", "1", "5", "4"},
-                {"6", "0", "1", "1"},
-                {"7", "2", "1", "1"}};
+        Set<Student> students = new HashSet<>();//Задание 1
 
-        try {
-            int sum = processMatrix(matrix);
-            System.out.println("Сумма елементов матрицы: " + sum);
-        } catch (MyArraySizeException | MyArrayDataException e) {
-            System.out.println(e.getMessage());
-        }
-    }
+        StudentManager studentManager = new StudentManager();
 
-    public static int processMatrix(String[][] matrix) throws MyArraySizeException, MyArrayDataException {
-        if (matrix.length == 4) {
-            for (int i = 0; i < 4; i++) {
-                if (matrix[i].length != 4) {
-                    throw new MyArraySizeException("Неверный размер матрицы. Ожидаемый размер 4х4.");
-                }
-            }
-        } else {
-            throw new MyArraySizeException("Неверный размер матрицы. Ожидаемый размер 4х4.");
-        }
+        Map<String, Integer> gradesM = new HashMap<>();
+        gradesM.put("Math", 3);
+        gradesM.put("Physics", 4);
+        gradesM.put("Chemistry", 5);
 
-        int sum = 0;
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 4; j++) {
-                try {
-                    sum += Integer.parseInt(matrix[i][j]);
-                } catch (NumberFormatException e) {
-                    throw new MyArrayDataException("Неверный формат данных в ячейке (" + i + ", " + j + "): " + matrix[i][j]);
-                }
-            }
-        }
+        Map<String, Integer> gradesN = new HashMap<>();
+        gradesN.put("Math", 3);
+        gradesN.put("Physics", 3);
+        gradesN.put("Chemistry", 2);
 
-        return sum;
+        Map<String, Integer> gradesK = new HashMap<>();
+        gradesK.put("Math", 4);
+        gradesK.put("Physics", 4);
+        gradesK.put("Chemistry", 3);
+
+        Map<String, Integer> gradesZ = new HashMap<>();
+        gradesZ.put("Math", 5);
+        gradesZ.put("Physics", 4);
+        gradesZ.put("Chemistry", 5);
+
+        Student max = new Student("Max", "it-1", 1, gradesM);
+        Student nick = new Student("Nick", "it-4", 2, gradesN);
+        Student kate = new Student("Kate", "it-3", 2, gradesK);
+        Student zara = new Student("Zara", "it-2", 3, gradesZ);
+
+        studentManager.addStudent(students, max);
+        studentManager.addStudent(students, nick);
+        studentManager.addStudent(students, kate);
+        studentManager.addStudent(students, zara);
+
+        studentManager.printStudents(students, 2);
+        studentManager.removeStudentsWithLowGrades(students);
+        studentManager.promoteStudents(students);
+        studentManager.printStudents(students, 2);
+
+        PhoneBook phoneBook = new PhoneBook();//Задание 2
+        phoneBook.add("Ivanov", "123456");
+        phoneBook.add("Petrov", "654321");
+        phoneBook.add("Ivanov", "789101");
+
+        System.out.println("Phones for Ivanov: " + phoneBook.get("Ivanov"));
+        System.out.println("Phones for Petrov: " + phoneBook.get("Petrov"));
     }
 }
