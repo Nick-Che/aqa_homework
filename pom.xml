@@ -8,6 +8,15 @@
     <artifactId>chernyshov_aqa</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.11.0</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
     <properties>
         <maven.compiler.source>23</maven.compiler.source>
         <maven.compiler.target>23</maven.compiler.target>
