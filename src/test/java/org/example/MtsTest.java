@@ -30,7 +30,7 @@ public class MtsTest {
         driver = new ChromeDriver();
         driver.get("https://www.mts.by/");
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@id='cookie-agree']")));
         WebElement acceptCookiesButton = driver.findElement(By.xpath("//button[@id='cookie-agree']"));
         acceptCookiesButton.click();
