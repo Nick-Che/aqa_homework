@@ -2,7 +2,6 @@ package org.example;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.example.Pages.HomePage;
-import org.example.Pages.Locators;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

@@ -1,0 +1,7 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","11842","Проверка окна оплаты","","Thu Mar 20 21:53:32 MSK 2025","passed","Thu Mar 20 21:53:43 MSK 2025","","org.example.MainPageTest","org.example.MainPageTest","testPaymentPage"
+"","29289","Проверка наличия логотипов платёжных систем","","Thu Mar 20 21:52:51 MSK 2025","passed","Thu Mar 20 21:53:20 MSK 2025","","org.example.MainPageTest","org.example.MainPageTest","testPaymentSystemLogos"
+"","9657","Проверка работы ссылки ""Подробнее о сервисе""","","Thu Mar 20 21:52:28 MSK 2025","passed","Thu Mar 20 21:52:38 MSK 2025","","org.example.MainPageTest","org.example.MainPageTest","testAboutServiceLink"
+"","11790","Проверка названия блока ""Пополнение без комиссии""","","Thu Mar 20 21:53:20 MSK 2025","passed","Thu Mar 20 21:53:32 MSK 2025","","org.example.MainPageTest","org.example.MainPageTest","testBlockName"
+"","14268","Проверка кнопки ""Продолжить""","","Thu Mar 20 21:52:14 MSK 2025","passed","Thu Mar 20 21:52:28 MSK 2025","","org.example.MainPageTest","org.example.MainPageTest","testContinueButton"
+"","12629","Проверка плейсхолдеров формы ""услуги связи""","","Thu Mar 20 21:52:38 MSK 2025","passed","Thu Mar 20 21:52:51 MSK 2025","","org.example.MainPageTest","org.example.MainPageTest","testConnectionFormPlaceholders"
