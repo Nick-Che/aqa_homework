@@ -39,7 +39,7 @@ public class Locators {
     public static final By visaPaymentLogo = By.xpath("//*[@src='assets/images/payment-icons/card-types/visa-system.svg']");
     public static final By masterCardPaymentLogo = By.xpath("//*[@src='assets/images/payment-icons/card-types/mastercard-system.svg']");
     public static final By belcardPaymentLogo = By.xpath("//*[@src='assets/images/payment-icons/card-types/belkart-system.svg']");
-    public static final By otherPaymentLogo = By.xpath("//*[@class='cards-brands cards-brands_random ng-tns-c61-0 ng-star-inserted']");
+    public static final By otherPaymentLogo = By.xpath("/html/body/app-root/div/div/div/app-payment-container/section/div/app-card-page/div/div[1]/app-card-input/form/div[1]/div[1]/app-input/div/div/div[2]/div/div/div");
     public static final By paymentSubmit = By.xpath("//*[@class='colored disabled']");
 
 }
